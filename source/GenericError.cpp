@@ -32,7 +32,7 @@
 #include "GenericError.h"
 #include "logger.hpp"
 
-void errorFuncHandler( void * ctx, xmlErrorPtr error )
+void errorFuncHandler( void * ctx, const xmlError * error )
 {
     char *filestr = (char*)"";
     char *msgstr  = (char*)"";
