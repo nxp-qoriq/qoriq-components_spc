@@ -78,7 +78,8 @@ spc : ./SPC.o ./GenericError.o libspc.a
 
 $(objects) : $(headers)
 
-libspc.a : libspc.a($(objects))
+libspc.a : $(objects)
+	$(AR) $(ARFLAGS) $@ $^
 
 .PHONY: clean
 clean:
